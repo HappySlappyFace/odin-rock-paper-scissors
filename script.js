@@ -4,6 +4,19 @@ function getComputerChoice(){
     const value = Math.round(Math.random()*2);
     return (text[value]);
 }
+function reset(){
+    let button = document.querySelectorAll(".button");
+    let plaS = document.querySelector("#playerScore");
+    let compS = document.querySelector("#computerScore");
+    let res = document.querySelector(".result");
+    plaScor=0;
+    compScor=0;
+    button.forEach(e => e.disabled=false);
+    button.forEach(e => e.style.backgroundColor="#881E27");
+    plaS.textContent=plaScor;
+    compS.textContent=compScor;
+    res.textContent="Play!";
+}
 function playRound(playerSelection,computerSelection){
     let player=playerSelection.toLowerCase();
     let computer=computerSelection.toLowerCase();
@@ -13,7 +26,7 @@ function playRound(playerSelection,computerSelection){
     let res = document.querySelector(".result");
     let compS = document.querySelector("#computerScore");
     let choices = document.querySelector(".choices");
-    
+    let button = document.querySelectorAll(".button");
     pla.textContent=player.charAt(0).toUpperCase()+player.substring(1);
     comp.textContent=computer.charAt(0).toUpperCase()+computer.substring(1);
     console.log(player+" "+computer);
@@ -56,6 +69,19 @@ function playRound(playerSelection,computerSelection){
     }
     plaS.textContent=plaScor;
     compS.textContent=compScor;
+    if (plaScor+compScor>=5){
+        if (plaScor==compScor){
+            res.textContent="Game ended! Tie!"
+        }
+        if (plaScor>compScor){
+            res.textContent="Game ended! Player wins!"
+        }
+        if (plaScor<compScor){
+            res.textContent="Game ended! Computer wins!"
+        }
+        button.forEach(e => e.disabled=true);
+        button.forEach(e => e.style.backgroundColor="#3E0E14");
+    }
 }
 function game(){
     let counter=0;

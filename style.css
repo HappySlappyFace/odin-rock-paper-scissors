@@ -15,7 +15,9 @@ h1,p{
     font-weight: bold;
 }
 .container{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .header h1{
     font-family: 'PT Sans', sans-serif;
@@ -24,6 +26,7 @@ h1,p{
     text-align: center;
 }
 .header{
+    flex: 1;
     padding: 20px;
     align-content: center;
     justify-content: center;
@@ -33,18 +36,18 @@ h1,p{
     font-family: 'Open Sans', sans-serif;
     display: flex;
     align-content: center;
-    
-    justify-content: space-around;
+    flex: 1 1 100px;
+    justify-content: center;
     padding: 15px;
+    gap:15px;
 }
 button{
     color:#D6C18A;
     font-weight: bold;
     font-size: 20px;
-    flex: 1;
-    
+    flex: 1 1 100px;
+    max-width: 400px;
     padding: 10px 0px ;
-    margin: 0px 10px;
     background-color: #881E27;
     border: none;
 }
@@ -58,23 +61,34 @@ button:active{
     justify-content: center;
     gap: 20px;
     padding: 15px;
+    flex: 1;
 }
 .choice{
+    max-width: 605px;
     flex: 1;
     text-align: center;
     background-color: #D6C18A;
-    padding: 10px 20px;
+    padding: 10px 0px;
     color: #3E0E14;
 }
 .scores{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     color: #D6C18A;
     padding: 15px;
+}
+.score{
+    text-align: center;
+    flex: 1;
 }
 .result{
     text-align: center;
     color: #D6C18A;
     font-weight: bold;
     font-size: 20px;
+}
+.restart{
+    margin-top: 15px;
+    align-self: center;
+    padding: 10px 20px;
 }
