@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    display: flex;
+    background-color: #6B191F;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+h1,p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+}
+.header h1{
+    font-family: 'PT Sans', sans-serif;
+    color: #B39856;
+    font-size: 30px;
+    text-align: center;
+}
+.header{
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+    background-color: #3E0E14;
+}
+.buttons{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-content: center;
+    
+    justify-content: space-around;
+    padding: 15px;
+}
+button{
+    color:#D6C18A;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 1;
+    
+    padding: 10px 0px ;
+    margin: 0px 10px;
+    background-color: #881E27;
+    border: none;
+}
+button:active{
+    color: #B39856;
+    background-color: #3E0E14;
+}
+.choices{
+    background-color: #3E0E14;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+.choice{
+    flex: 1;
+    text-align: center;
+    background-color: #D6C18A;
+    padding: 10px 20px;
+    color: #3E0E14;
+}
+.scores{
+    display: flex;
+    justify-content: space-around;
+    color: #D6C18A;
+    padding: 15px;
+}
+.result{
+    text-align: center;
+    color: #D6C18A;
+    font-weight: bold;
+    font-size: 20px;
+}

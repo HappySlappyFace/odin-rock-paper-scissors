@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <h1>Rock, Paper, Scissors!</h1>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="playRound('rock',getComputerChoice())">Rock</button>
+            <button class="button" onclick="playRound('paper',getComputerChoice())">Paper</button>
+            <button class="button" onclick="playRound('scissors',getComputerChoice())">Scissors</button>
+        </div>
+        <div class="choices">
+            <p class="choice" id="playerChoice">|</p>
+            <p class="choice" id="computerChoice">|</p>
+        </div>
+        <div class="scores">
+            <p class="score" id="playerScore">0</p>
+            <p class="score" id="computerScore">0</p>
+        </div>
+        <div class="result">Play!</div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
