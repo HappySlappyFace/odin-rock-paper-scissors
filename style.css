@@ -50,6 +50,7 @@ button{
     padding: 10px 0px ;
     background-color: #881E27;
     border: none;
+    cursor: pointer;
 }
 button:active{
     color: #B39856;
